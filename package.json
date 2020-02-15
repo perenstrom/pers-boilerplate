@@ -1,0 +1,38 @@
+{
+  "name": "pers-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate express web server",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "npm run clean && npm run build-babel",
+    "clean": "rm -rf build && mkdir build",
+    "serve": "npm run build && node ./build/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perenstrom/pers-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perenstrom/pers-boilerplate/issues"
+  },
+  "engines": {
+    "node": "13.x"
+  },
+  "homepage": "https://github.com/perenstrom/pers-boilerplate#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4"
+  },
+  "devDependencies": {
+    "@babel/node": "^7.8.4",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2"
+  }
+}
